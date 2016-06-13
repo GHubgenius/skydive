@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting-starteds on Skydive Docs</title>
-    <link>http://redhat-cip.github.io/skydive/getting-started/</link>
+    <link>http://skydive-project.github.io/skydive/getting-started/</link>
     <description>Recent content in Getting-starteds on Skydive Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 May 2016 11:02:01 +0200</lastBuildDate>
-    <atom:link href="http://redhat-cip.github.io/skydive/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://skydive-project.github.io/skydive/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to deploy Skydive with Devstack</title>
-      <link>http://redhat-cip.github.io/skydive/getting-started/devstack/</link>
+      <link>http://skydive-project.github.io/skydive/getting-started/devstack/</link>
       <pubDate>Fri, 06 May 2016 11:02:01 +0200</pubDate>
       
-      <guid>http://redhat-cip.github.io/skydive/getting-started/devstack/</guid>
+      <guid>http://skydive-project.github.io/skydive/getting-started/devstack/</guid>
       <description>
 
 &lt;h2 id=&#34;devstack-plugin&#34;&gt;Devstack plugin&lt;/h2&gt;
@@ -26,7 +26,7 @@ by DevStack.&lt;/p&gt;
 &lt;p&gt;For a single node setup adding the following lines to your local.conf file
 should be enough.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;enable_plugin skydive https://github.com/redhat-cip/skydive.git
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;enable_plugin skydive https://github.com/skydive-project/skydive.git
 
 enable_service skydive-agent skydive-analyzer
 &lt;/code&gt;&lt;/pre&gt;
@@ -76,7 +76,7 @@ than the admin.&lt;/p&gt;
 &lt;p&gt;Once you have your environment set up, going to the Analyzer Web Interface
 should show similar to the following capture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://redhat-cip.github.io/skydive/images/devstack-two-nodes.png&#34; alt=&#34;WebUI Capture&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://skydive-project.github.io/skydive/images/devstack-two-nodes.png&#34; alt=&#34;WebUI Capture&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;capture-traffic&#34;&gt;Capture traffic&lt;/h2&gt;
 
@@ -155,10 +155,10 @@ between the qrouter and the qdhcp namespaces.&lt;/p&gt;
     
     <item>
       <title>How to deploy Skydive with Docker</title>
-      <link>http://redhat-cip.github.io/skydive/getting-started/docker/</link>
+      <link>http://skydive-project.github.io/skydive/getting-started/docker/</link>
       <pubDate>Fri, 06 May 2016 11:02:01 +0200</pubDate>
       
-      <guid>http://redhat-cip.github.io/skydive/getting-started/docker/</guid>
+      <guid>http://skydive-project.github.io/skydive/getting-started/docker/</guid>
       <description>
 
 &lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
@@ -188,10 +188,10 @@ definition is located in the &lt;code&gt;contrib/docker&lt;/code&gt; folder of t
     
     <item>
       <title>Installation</title>
-      <link>http://redhat-cip.github.io/skydive/getting-started/install/</link>
+      <link>http://skydive-project.github.io/skydive/getting-started/install/</link>
       <pubDate>Fri, 06 May 2016 11:02:01 +0200</pubDate>
       
-      <guid>http://redhat-cip.github.io/skydive/getting-started/install/</guid>
+      <guid>http://skydive-project.github.io/skydive/getting-started/install/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -217,7 +217,7 @@ informations will be captured&lt;/li&gt;
 &lt;p&gt;Make sure you have a working Go environment. &lt;a href=&#34;http://golang.org/doc/install.html&#34;&gt;See the install instructions&lt;/a&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ mkdir -p $GOPATH/src/github.com/redhat-cip
-$ git clone https://github.com/redhat-cip/skydive.git $GOPATH/src/github.com/redhat-cip/skydive
+$ git clone https://github.com/skydive-project/skydive.git $GOPATH/src/github.com/redhat-cip/skydive
 $ cd $GOPATH/src/github.com/redhat-cip/skydive
 $ make install
 &lt;/code&gt;&lt;/pre&gt;
@@ -229,6 +229,10 @@ node setup, the analyzer IP/PORT need to be adapted.&lt;/p&gt;
 
 &lt;p&gt;Processes are bound to 127.0.0.1 by default, you can explicitly change binding
 address with &amp;ldquo;listen: 0.0.0.0:port&amp;rdquo; in the proper configuration sections.&lt;/p&gt;
+
+&lt;p&gt;User can add host metadata to specify an extra host information in
+&amp;ldquo;agent.metadata&amp;rdquo; configuration section. All the key value pairs given
+under this configuration section will be added to host metadata.&lt;/p&gt;
 
 &lt;p&gt;See the full list of configuration parameters in the sample configuration file
 &lt;a href=&#34;https://github.com/redhat-cip/skydive/blob/master/etc/skydive.yml.default&#34;&gt;etc/skydive.yml.default&lt;/a&gt;.&lt;/p&gt;
@@ -245,10 +249,10 @@ address with &amp;ldquo;listen: 0.0.0.0:port&amp;rdquo; in the proper configurat
     
     <item>
       <title>Skydive client, API &amp; WebUI</title>
-      <link>http://redhat-cip.github.io/skydive/getting-started/client/</link>
+      <link>http://skydive-project.github.io/skydive/getting-started/client/</link>
       <pubDate>Fri, 06 May 2016 11:02:01 +0200</pubDate>
       
-      <guid>http://redhat-cip.github.io/skydive/getting-started/client/</guid>
+      <guid>http://skydive-project.github.io/skydive/getting-started/client/</guid>
       <description>
 
 &lt;h2 id=&#34;client&#34;&gt;Client&lt;/h2&gt;
@@ -355,10 +359,10 @@ match.&lt;/p&gt;
     
     <item>
       <title>Getting started</title>
-      <link>http://redhat-cip.github.io/skydive/getting-started/</link>
+      <link>http://skydive-project.github.io/skydive/getting-started/</link>
       <pubDate>Wed, 04 May 2016 17:48:22 +0200</pubDate>
       
-      <guid>http://redhat-cip.github.io/skydive/getting-started/</guid>
+      <guid>http://skydive-project.github.io/skydive/getting-started/</guid>
       <description></description>
     </item>
     
